@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>text summarizer</title>
+        <link rel="stylesheet" type="text/css" href = "{{ url_for('static', filename = 'style.css')}}">
+        <script type="text/javascript" src = "{{ url_for('static', filename = 'index.js')}}"></script>
+        
+    </head>
+    <body>
+        <header>
+        <h1 class="app-title"><a href="#">Text Summarizer</a></h1>
+        </header>
+        <main class="main-content">
+            <form action="http://127.0.0.1:5324/summary" method="POST">
+            <div class="original">
+            <p><input type="text" name="inputLink" class="original-text" placeholder="Paste your link here..."></input></p>
+            <p><input type = "submit" class="summary-btn" value="summary" /></p>
+            </div>
+            </form>
+            <div class="instruction">
+                <p>Note: This app is a text summarizer. It's for improving the efficiency of reading and learning for everyone. To use it properly, you could copy and paste the link to a resource as an input in the orange area. Then, click on the "summary" button, you would be redirected to another page that shows the key words and overall summary of your resource. After that, there would be a "surprise" for you, which is a new designed feature of this app. Try now and enjoy it!</p>
+                <p>Contact: Please reach out to me if you have any questions or comments. Email: yanghai@oregonstate.edu</p>
+            </div>
+        </main>
+    </body>
+</html>

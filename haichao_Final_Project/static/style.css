@@ -1,0 +1,94 @@
+body {
+    display: block;
+    background-image: url("image.jpg");
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.app-title a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    position: relative;
+    font-weight: 100;
+    font-size: 60px;
+    margin: 0 0 0 20px;
+    left: 610px;
+}
+
+.original-text{
+    display: block;
+    border: 8px solid black;
+    border-radius: 3px;
+    height: 350px;
+    width: 675px;
+    margin: 20px;
+    position: relative;
+    left: 475px;
+    padding: 10px;
+    background-color: lightsalmon;
+    color: black;
+    font-size: 30px;
+}
+
+.instruction{
+    font-size: 15px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.summary-btn{
+    display: inline-block;
+    position: relative;
+    left: 1050px;
+    top: -60px;
+}
+
+.original{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2px 15px;
+}
+.finish_btn {
+    display: block;
+    position: relative;
+    left: 775px;
+    padding: 10px;
+    font-size: 15px;
+    color: black;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+} 
+
+.hidden_dialog {
+    padding: 2px 15px;
+    display: block;
+    position: relative;
+    left: 8px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.rate {
+    display: block;
+    position:relative;
+    left: 680px;
+}
+
+.rating{
+    display: block;
+    position:relative;
+    left: 710px;
+}
+
+.done_btn{
+    display: block;
+    position:relative;
+    left: 770px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>text summarizer</title>
+        <link rel="stylesheet" type="text/css" href = "{{ url_for('static', filename = 'style.css')}}">
+        <script type="text/javascript" src = "{{ url_for('static', filename = 'index.js')}}"></script>
+    </head>
+    <body>
+        <header>
+        <h1 class="app-title"><a href="#">Text Summarizer</a></h1>
+        </header>
+        <main class="main-content">
+            <form action="http://127.0.0.1:5324/summary" method="POST">
+            <div class="original">
+            <p>{{ summaryData }}</p>
+            
+            </div>
+            </form>
+            <button type = "button" class="finish_btn" onclick="showModal()">Click Me!</button>
+            <div id='hidd' class="hidden">
+                <div class="hidden_dialog">
+                <p>Great Work! Hope this app helps you learn things more efficiently. Have a good day and enjoy every challenge in your life! Overcoming challenge makes you stronger. Keep on going and never give up!</p>
+                <p class="rate">Please rate our app service (5-best, 1-worst)</p>
+                <div class="rating">
+                    <label for="rating_5">5</label>
+                    <input type="radio" name="rating" id="rating_5" value="5" />
+                    <label for="rating_4">4</label>
+                    <input type="radio" name="rating" id="rating_4" value="4" />
+                    <label for="rating_3">3</label>
+                    <input type="radio" name="rating" id="rating_3" value="3" />
+                    <label for="rating_2">2</label>
+                    <input type="radio" name="rating" id="rating_2" value="2" />
+                    <label for="rating_1">1</label>
+                    <input type="radio" name="rating" id="rating_1" value="1" />
+                </div>
+                <button type = "button" class="done_btn" onclick="closeModal()">Done</button>
+                </div>
+            </div>
+
+        </main>
+        <script>
+            function showModal(){
+                document.getElementById('hidd').classList.remove('hidden');
+            }
+            function closeModal(){
+                document.getElementById('hidd').classList.add('hidden');
+            }
+        </script>
+    </body>
+</html>    
