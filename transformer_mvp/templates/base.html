@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{ url_for('static', filename='map.svg') }}">
+        <title>{% block title %}{% endblock %} </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body style="font-family: Monaco, Monospace, Monaco">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center" style="height:100px">
+                <h1 style="color:#90ee90">Location Roulette <img src="{{ url_for('static', filename='globe.svg') }}" style="width:30px">
+</h1>
+            </div>
+
+            <div class="row" style="border-bottom:solid">
+                    <div class="col-5" style="padding:15px">
+                        <b>Location:</b> {{ location }}<br>
+                        <b>Population:</b> {{ population }}
+                    </div>
+                    <div class="col-7">
+                    <ul class="nav justify-content-left" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-controls="images" data-toggle="tab" role="tab" href="#images" aria-selected="true">Images</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-controls="text" data-toggle="tab" role="tab" href="#text" aria-selected="true">Text summary</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-controls="guide" data-toggle="tab" role="tab" href="#guide" aria-selected="true">Guide</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center" style="border-bottom:solid">
+                    {% block content %}{% endblock %}
+            </div>
+            <form action="/" method="post">
+                <div class="row justify-content-center align-items-center" style="padding:25px">
+                        {% if index == 1 %}
+                            <div class="col-4">
+                                <button type="submit" name="submit" value="back" class="btn btn-primary" disabled>&lt; PREVIOUS</button>
+                            </div>
+                        {% else %}
+                            <div class="col-4">
+                                <button type="submit" name="submit" value="back" class="btn btn-primary" style="width:115px">&lt; PREVIOUS</button>
+                            </div>
+                        {% endif %}
+                        <div class="col-4 text-right">
+                            <button type="submit" name="submit" value="next" class="btn btn-primary" style="width:115px">NEXT &gt;</button>
+                        </div>
+                </div>
+            </form>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+</html>

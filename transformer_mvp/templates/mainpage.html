@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} Location Roulette {% endblock %}
+{% block content %}
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="images" role="tabpanel" aria-labelledby="images-tab">
+    {% for image in images %}
+        <img src={{ image }} style="padding:50px" class="zoom">
+    {% endfor %}
+
+  </div>
+  <div class="tab-pane fade" id="text" role="tabpanel" aria-labelledby="text-tab" style="text-align:center;padding:20px">
+    <p> <b>Header text:</b> {{ header }}</p> <br><p><b>Summarized Text:</b> {{ text }}<p/>
+    <br> <p> <b>Keywords:</b> {{ keywords }}</p>
+  </div>
+  <div class="tab-pane fade" id="guide" role="tabpanel" aria-labelledby="text-tab" style ="padding:20px">
+    <div class="row">Location Roulette pulls Wikipedia articles from random locations around the world, providing the location name, population data, images,
+      and text a overview.</div><br>
+    <div class="row">Click the "NEXT >" Button below in order to go to a new location.</div>
+    <div class="row"><b style="color:red">&lt;Warning!&gt;</b> THERE ARE A LOT OF LOCATIONS
+    - the next button goes on forever</div><br>
+    <div class="row">Click on the "< PREVIOUS " button to go back to a previously seen location.</div><br>
+    <div class="row">Want more information? The Text Summary tab provides a summarized version of the associated Wikipedia article.</div><br>
+    <div class="row">The images tab provides images of the location pulled from Wikipedia.</div>
+  </div>
+</div>
+
+
+
+{% endblock %}

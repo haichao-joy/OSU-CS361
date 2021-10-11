@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text Shortener</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+
+    <body class="outline">
+        <form method="POST">
+            <div class="center">
+                <div class="inner">
+                    <h1 class="header_style">TL;DR please</h1>
+                    <div class="inner_block">
+                        <input type="text" id="url_input" placeholder="Enter your URL here">
+                        <br />
+                        <br />
+                        <textarea id="text_input" rows="7" cols="60" placeholder="Enter text inputs here"></textarea>
+                        <br />
+                        <br />
+                        <p1>Sentence Length: </p1><input type="text" id="length" placeholder="Enter number of sentences" value="7">
+                        <br />
+                        <br />
+                        <button type="button">TL;DR</button>
+                        <br />
+                        <p1><br />Place your input in the URL OR Text Field, not both. </p1>
+                        <br />
+                        <p1>Pls remember to like and subscribe.<br />
+                            Paypal Donations @ huangjo@oregonstate.edu</p1>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+body, html {
+    margin:0;
+    padding:0;
+    height: 100%;
+    width: 100%;
+}
+
+.center {
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #333;
+  height: inherit;
+  width: 50%;
+  font-family: "Monaco", Monospace, Monaco
+  position:relative;
+}
+
+.inner{
+    width:inherit;
+    position:absolute;
+    top:30%;
+    transform: translateY(-50%);
+    border: solid;
+}
+
+.header_style{
+    text-align:center;
+}
+
+.inner_block{
+    text-align:center
+}
+
+.zoom{
+    transition: transform .2s;
+}
+
+.zoom:hover{
+    transform: scale(1.6);
+}

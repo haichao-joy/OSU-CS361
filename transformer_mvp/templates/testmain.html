@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %} test {% endblock %}
+{% block content %}
+    <form action="/summary" method="post">
+            <div class="center">
+                <div class="inner">
+                    <h1 class="header_style">TL;DR please</h1>
+                    <div class="inner_block">
+                        <input type="text" name="url_input" placeholder="Enter your URL here">
+                        <br />
+                        <br />
+                        <textarea name="text_input" rows="7" cols="60" placeholder="Enter text inputs here"></textarea>
+                        <br />
+                        <br />
+                        <p>Sentence Length: </p><input type="text" name="length" placeholder="Enter number of sentences" value="7">
+                        <br />
+                        <br />
+                        <button type="submit" value="submit">TL;DR</button>
+                        <br />
+                        <p1><br />Place your input in the URL OR Text Field, not both. </p1>
+                        <br />
+                        <p1>Pls remember to like and subscribe.<br />
+                            Paypal Donations @ huangjo@oregonstate.edu</p1>
+                    </div>
+                </div>
+            </div>
+    </form>
+{% endblock %}

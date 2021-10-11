@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} Summary {% endblock %}
+{% block content %}
+        <form action="/" method="post">
+            <div class="center">
+                <div class="inner">
+                    <h1 class="header_style">TL;DR:</h1>
+                    <p1>{{ tldr }}</p1>
+                    </br>
+                    <p1>
+                        </br>
+                        {% if flag %}
+                            Main Keywords:
+                            {% for i in range(len) %}
+                                {% if i == len-1 %}
+                                    <p1> {{ keywords[i] }} </p1>
+                                {% else %}
+                                    <p1> {{ keywords[i] }}, </p1>
+                                {% endif %}
+                            {% endfor %}
+                        </br>
+                        </br>
+                        {% endif %}
+                    </p1>
+                    <div class="inner_block">
+                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Penang_City_Hall.jpg/220px-Penang_City_Hall.jpg">
+                        <button style="margin: 0 auto" type="submit" value="submit">Summarize other text</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+{% endblock %}
